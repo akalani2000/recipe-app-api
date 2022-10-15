@@ -116,13 +116,13 @@ class BaseRecipeAttraViewSet(mixins.DestroyModelMixin,
         ).order_by('-name').distinct()
 
 
-class TagViweSet(BaseRecipeAttraViewSet):
+class TagViewSet(BaseRecipeAttraViewSet):
     '''Manage Tag in the database.'''
     serializer_class = serializers.TagSerializer
     queryset = Tag.objects.all()
 
 
-class IngredientViweSet(BaseRecipeAttraViewSet):
+class IngredientViewSet(BaseRecipeAttraViewSet):
     '''Manage Ingredients in the database.'''
     serializer_class = serializers.IngredientSerializer
     queryset = Ingredient.objects.all()
